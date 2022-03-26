@@ -25,11 +25,10 @@ function Detail() {
             </TrailerButton>
 
             <AddButton>
-
+                <span>+</span>
             </AddButton>
 
             <GroupWatchButton>
-
             </GroupWatchButton>
         </Controls>
     </Container>
@@ -76,7 +75,7 @@ const ImageTitle = styled.div`
 
 const Controls = styled.div`
     display:flex;
-    
+    align-items:center;
 `;
 
 const PlayButton = styled.button`
@@ -106,7 +105,22 @@ const TrailerButton = styled(PlayButton)`
 `;
 
 const AddButton = styled.button`
+    margin-right:17px;
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    cursor:pointer;
+    border: 2px solid #fff;
+    background:rgba(0,0,0,0.7);
 
+
+    span{
+        font-size:1.8rem;
+        color:#fff;
+    }
 `;
 
 const GroupWatchButton = styled.button`
