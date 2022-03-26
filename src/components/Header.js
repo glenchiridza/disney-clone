@@ -37,6 +37,8 @@ function Header() {
             </a>
 
         </NavMenu>
+
+        <UserImg src="images/glen.jpg" />
     </Nav>
   )
 }
@@ -57,16 +59,47 @@ const Logo = styled.img`
 
 const NavMenu = styled.div`
     display:flex;
+    flex:1;
+    margin-left:20px;
+    align-items:center;
     a {
         display:flex;
         align-items:center;
         padding:0 12px;
+        cursor:pointer;
         img{
             height:20px;
         }
         span {
             font-size:.7rem;
             letter-spacing:1.42px;
+            position:relative;
+
+            &:after {
+                content:"";
+                height:2px;
+                background:#fff;
+                position:absolute;
+                left:0;
+                right:0;
+                bottom:-6px;
+                opacity:0;
+                transform:scaleX(0);
+            }
+        }
+        &:hover{
+            span:after{
+                opacity:1;
+                transform:scaleX(1);
+            }
         }
     }
+`;
+
+const UserImg = styled.img`
+    width:40px;
+    height:40px;
+    border-radius:55%;
+    
+    cursor:pointer;
 `;
