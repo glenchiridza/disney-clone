@@ -5,7 +5,8 @@ function Login() {
   return (
     <Container>
         <Content>
-
+            <ContentLogoOne src="images/cta-logo-one.svg"/>
+            <SignUp>Get All There</SignUp>
         </Content>
     </Container>
   )
@@ -16,6 +17,9 @@ export default Login;
 const Container = styled.div`
     position:relative;
     height:calc(100vh - 70px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     &:before{
         position:absolute;
@@ -33,5 +37,33 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
+    max-width:650px;
+    width:70%;
+    padding: 80px 40px;
+    display:flex;
+    flex-direction:column;
+`;
 
+const ContentLogoOne = styled.img`
+
+`;
+
+const SignUp = styled.a`
+    text-transform:uppercase;
+    text-decoration:none;
+    width:100%;
+    padding:20px;
+    background-color:#0063e5;
+    font-weight:bold;
+    cursor:pointer;
+    text-align:center;
+    border-radius:4px;
+    transition:all 250ms;
+    letter-spacing:1.5px;
+    margin-top:5px;
+    margin-bottom:10px;
+
+    &:hover{
+        background-color:#0483ee;
+    }
 `;
