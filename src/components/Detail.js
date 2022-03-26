@@ -15,11 +15,13 @@ function Detail() {
 
         <Controls>
             <PlayButton>
-
+                <img src='/images/play-icon-black.png'/>
+                <span>Play</span>
             </PlayButton>
 
             <TrailerButton>
-
+                <img src='/images/play-icon-white.png'/>
+                <span>Trailer</span>
             </TrailerButton>
 
             <AddButton>
@@ -73,21 +75,26 @@ const ImageTitle = styled.div`
 `;
 
 const Controls = styled.div`
+    display:flex;
+    
+`;
+
+const PlayButton = styled.button`
+    border-radius:4px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    height:54px;
+`;
+
+const TrailerButton = styled.button`
 
 `;
 
-const PlayButton = styled.div`
+const AddButton = styled.button`
 
 `;
 
-const TrailerButton = styled.div`
-
-`;
-
-const AddButton = styled.div`
-
-`;
-
-const GroupWatchButton = styled.div`
+const GroupWatchButton = styled.button`
 
 `;
