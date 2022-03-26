@@ -7,6 +7,11 @@ function Login() {
         <Content>
             <ContentLogoOne src="images/cta-logo-one.svg"/>
             <SignUp>Get All There</SignUp>
+            <Description>
+                Get Premium Access and watch all you want. well I own this clone so I get to watch all I want.
+                But you my friend, you , ought to pay for premium services. I hope you not considering to pay here kkk,
+                go to the official disney sight ey!
+            </Description>
         </Content>
     </Container>
   )
@@ -66,4 +71,13 @@ const SignUp = styled.a`
     &:hover{
         background-color:#0483ee;
     }
+`;
+
+const Description = styled.div`
+    line-height:1.4;
+    font-weight:400;
+    color:#e1e1e1;
+    letter-spacing:1.5px;
+    font-size:12px;
+    text-align:center;
 `;
