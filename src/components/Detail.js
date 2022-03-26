@@ -32,15 +32,18 @@ function Detail() {
             <img src='/images/group-icon.png'/>
             </GroupWatchButton>
 
-            <SubTitle>
-                2019  * 7m * Family, Fantasy, Kids, Animation
-            </SubTitle>
-
-            <Description>
-            Badag a wonderful animated movie where Mickey, Minnie and friends hitch a ride on a musical hay wagon,
-             but Peg-Leg Pete tries to one-up them with his jalopy. Featuring Walt Disney
-            </Description>
         </Controls>
+        
+        <TextItems>
+                <SubTitle>
+                    2019  * 7m * Family, Fantasy, Kids, Animation
+                </SubTitle>
+
+                <Description>
+                Badag a wonderful animated movie where Mickey, Minnie and friends hitch a ride on a musical hay wagon,
+                but Peg-Leg Pete tries to one-up them with his jalopy. Featuring Walt Disney
+                </Description>
+        </TextItems>
     </Container>
   )
 }
@@ -137,6 +140,12 @@ const GroupWatchButton = styled(AddButton)`
     background: rgb(0,0,0);
 `;
 
+const TextItems = styled.div`
+    width:50vw;
+    flex-wrap:wrap;
+    display:flex;
+    flex-direction:column;
+`;
 
 const SubTitle = styled.div`
     color:rgb(249,249,249);
@@ -145,8 +154,9 @@ const SubTitle = styled.div`
     margin-top:24px;
 `;
 const Description = styled.div`
-    line-height:1.6px;
-    font-size:1.2rem;
+    line-height:1.6;
+    font-size:17px;
     padding-top:16px;
     color:rgb(249,249,249);
+    font-weight:300;
 `;
