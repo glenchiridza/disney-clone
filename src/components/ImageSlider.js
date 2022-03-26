@@ -6,10 +6,45 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 function ImageSlider() {
+    let settings = {
+        dots:true,
+        Infinity:true,
+        speed:500,
+        slidesToShow:1,
+        slidesToScroll:1,
+        autoplay:true
+    }
 
   return (
-    <div>ImageSlider</div>
+    <Carousel {...settings}>
+        <Wrap>
+        <img src='/images/slider-badging.jpg' alt='slider1'/>
+        </Wrap>
+        <Wrap>
+        <img src='/images/slider-badag.jpg' alt='slider2'/>
+        </Wrap>
+        <Wrap>
+        <img src='/images/slider-badging.jpg' alt='slider3'/>
+        </Wrap>
+    </Carousel>
   )
 }
 
 export default ImageSlider;
+
+const Carousel = styled(Slider)`
+    margin-top:20px;
+    .slick-list{
+        overflow:visible;
+    }
+`;
+
+const Wrap = styled.div`
+    img{
+        width:100%;
+        height:100%;
+        border-radius:4px;
+        box-shadow: rgba(0 0 0 / 69%) 0px 36px 30px -10px,
+        rgba(0 0 0 / 73%) 0px 16px 10px -10px;
+    }
+`;
