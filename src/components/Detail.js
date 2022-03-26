@@ -14,7 +14,21 @@ function Detail() {
         </ImageTitle>
 
         <Controls>
+            <PlayButton>
 
+            </PlayButton>
+
+            <TrailerButton>
+
+            </TrailerButton>
+
+            <AddButton>
+
+            </AddButton>
+
+            <GroupWatchButton>
+
+            </GroupWatchButton>
         </Controls>
     </Container>
   )
@@ -59,5 +73,21 @@ const ImageTitle = styled.div`
 `;
 
 const Controls = styled.div`
+
+`;
+
+const PlayButton = styled.div`
+
+`;
+
+const TrailerButton = styled.div`
+
+`;
+
+const AddButton = styled.div`
+
+`;
+
+const GroupWatchButton = styled.div`
 
 `;
