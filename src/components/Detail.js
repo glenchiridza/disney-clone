@@ -82,13 +82,27 @@ const Controls = styled.div`
 const PlayButton = styled.button`
     border-radius:4px;
     font-size:15px;
+    padding:10px 24px;
+    margin-right:22px;
     display:flex;
     align-items:center;
     height:54px;
+    background: rgb(249,249,249);
+    border:none;
+    letter-spacing:1.8px;
+    cursor:pointer;
+
+    &:hover{
+        background: rgb(198, 198, 198);
+        color:#000;
+    }
 `;
 
-const TrailerButton = styled.button`
-
+const TrailerButton = styled(PlayButton)`
+    background:rgba(0,0,0,0.3);
+    border:1px solid #e1e1e1;
+    color:#e1e1e1;
+    text-transform:uppercase;
 `;
 
 const AddButton = styled.button`
