@@ -4,7 +4,9 @@ import styled from 'styled-components';
 function Login() {
   return (
     <Container>
-        
+        <Content>
+
+        </Content>
     </Container>
   )
 }
@@ -24,5 +26,12 @@ const Container = styled.div`
         bottom:0;
         z-index:-1;
         background-image:url('/images/login-background.jpg');
+        background-position:top;
+        background-size:cover;
+        backgrond-repeat:no-repeat;
     }
+`;
+
+const Content = styled.div`
+
 `;
