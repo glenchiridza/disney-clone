@@ -9,6 +9,13 @@ function Detail() {
             <img src='/images/slider-badag.jpg' />
         </Background>
 
+        <ImageTitle>
+            <img src="/images/viewers-disney.png" />
+        </ImageTitle>
+
+        <Controls>
+
+        </Controls>
     </Container>
   )
 }
@@ -28,5 +35,29 @@ const Background = styled.div`
     left:0;
     right:0;
     bottom:0;
-    
+    z-index:-1;
+    opacity:0.8;
+
+    img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }    
+`;
+
+const ImageTitle = styled.div`
+    height:30vh;
+    min-height:170px;
+    width:30vw;
+    min-width:200px;
+
+    img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+`;
+
+const Controls = styled.div`
+
 `;
