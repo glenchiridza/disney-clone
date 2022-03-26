@@ -12,6 +12,9 @@ function Login() {
                 But you my friend, you , ought to pay for premium services. I hope you not considering to pay here kkk,
                 go to the official disney sight ey!
             </Description>
+
+            <ContentLogoTwo src="images/cta-logo-two.png"/>
+
         </Content>
     </Container>
   )
@@ -52,6 +55,9 @@ const Content = styled.div`
 const ContentLogoOne = styled.img`
 
 `;
+const ContentLogoTwo = styled.img`
+
+`;
 
 const SignUp = styled.a`
     text-transform:uppercase;
@@ -80,4 +86,5 @@ const Description = styled.div`
     letter-spacing:1.5px;
     font-size:12px;
     text-align:center;
+    margin-bottom:10px;
 `;
