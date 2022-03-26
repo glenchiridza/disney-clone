@@ -38,7 +38,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-    overflow-y:hidden;
+    overflow:hidden;
     display:grid;
     grid-gap:25px;
     grid-template-columns: repeat(4, minmax(0,1fr));
@@ -52,7 +52,7 @@ const Wrap = styled.div`
     border:3ox solid #e1e1e1;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    transition:all 0.3sec;
+    transition:all 0.3s;
 
     img{
         width:100%;
