@@ -15,7 +15,11 @@ function Movies() {
         <Content>
             {
                 movies &&
-                    movies.map()
+                    movies.map((movie) =>{
+                        <Wrap key={movie.id}>
+                            <img src={movie.cardImg} />
+                        </Wrap>
+                    })
             }
 
             <Wrap>
