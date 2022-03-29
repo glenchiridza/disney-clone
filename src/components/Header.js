@@ -1,16 +1,37 @@
 import React from 'react'
 import styled from 'styled-components';
-import { selectUserName,selectUserPhoto } from '../features/user/userSlice';
-import {useSelector} from 'react-redux';
+import {useHistory} from 'react-router-dom';
+import { selectUserName,selectUserPhoto, setUserLogin,setSignOut } from '../features/user/userSlice';
+import {useDispatch,useSelector} from 'react-redux';
 import {auth,provider} from "../firebase"
 
 function Header() {
-
+    const dispatch = useDispatch()
+    const history = useHistory()
     const userName = useSelector(selectUserName);
     const userPhoto = useSelector(selectUserPhoto);
 
-    const signIn = () => {
+    const signIn = () => {  
+        auth.signInWithPopup(provider)
+        .then((res)=>{
+            let user = res.user;
+            dispatch(setUserLogin({
+                name:user.displayName,
+                email:user.email,
+                photo:user.photoURL
+            }))
+        })
+    }
 
+    const signOut = () =>{
+        auth.signOut()
+        .then((res)=>{
+
+            dispatch(setSignOut({
+
+            }))
+            history.push("/login")
+        })
     }
 
   return (
@@ -19,7 +40,7 @@ function Header() {
         {
             !userName ? (
                 <LoginContain>
-                    <Login>Login</Login>
+                    <Login onClick={signIn}>Login</Login>
                 </LoginContain>
             ) :
 
@@ -58,7 +79,7 @@ function Header() {
 
             </NavMenu>
 
-            <UserImg src="images/glen.jpg" />
+            <UserImg onClick={signOut} src="images/glen.jpg" />
          </>
         }
 
