@@ -1,7 +1,6 @@
 import React, {useEffect,useState} from 'react';
 import styled from 'styled-components';
 import {useParams} from 'react-router-dom'
-import { useEffect } from 'react';
 import db from '../firebase'
 
 function Detail() {
@@ -15,13 +14,64 @@ function Detail() {
             .get()
             .then((doc)=>{
                 if(doc.exists){
-
+                    setMovie(doc.data());
+                }else{
+                    //redirect to home
                 }
             })
-    }, [])
+    }, [id])
 
   return (
     <Container>
+
+        {/*
+        { movies && (
+        <>
+            <Background>
+                <img key={movie.id} src={movie.backgroundImg} />
+            </Background>
+
+            <ImageTitle>
+                <img key={movie.id} src={movie.titleImg} />
+            </ImageTitle> 
+            <Controls>
+                <PlayButton>
+                    <img src='/images/play-icon-black.png'/>
+                    <span>Play</span>
+                </PlayButton>
+
+                <TrailerButton>
+                    <img src='/images/play-icon-white.png'/>
+                    <span>Trailer</span>
+                </TrailerButton>
+
+                <AddButton>
+                    <span>+</span>
+                </AddButton>
+
+                <GroupWatchButton>
+                <img src='/images/group-icon.png'/>
+                </GroupWatchButton>
+
+            </Controls>
+            
+            <TextItems>
+                    <SubTitle>
+                        {movies.subTitle{}}
+                    </SubTitle>
+
+                    <Description>
+                    {movies.description}
+                    </Description>
+            </TextItems>
+            
+        </>
+        )
+
+        
+        }
+
+        */}
         
         <Background>
             <img src='/images/slider-badag.jpg' />

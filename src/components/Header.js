@@ -51,7 +51,7 @@ const Nav = styled.nav`
     display:flex;
     align-items:center;
     padding: 0 30px;
-    overflow-x:hidden;
+    overflow-x:scroll;
 `;
 
 const Logo = styled.img`
