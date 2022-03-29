@@ -1,15 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { selectUserName,selectUserPhoto, setUserLogin,setSignOut } from '../features/user/userSlice';
 import {useDispatch,useSelector} from 'react-redux';
 import {auth,provider} from "../firebase"
 
 function Header() {
     const dispatch = useDispatch()
-    const history = useHistory()
+    const navigate = useNavigate()
     const userName = useSelector(selectUserName);
     const userPhoto = useSelector(selectUserPhoto);
+
+    useEffect(()=>{
+        auth.onAuthStateChanged(async (user) =>{
+            if(user){
+            dispatch(setUserLogin({
+                name:user.displayName,
+                email:user.email,
+                photo:user.photoURL
+            }))
+            navigate.push("/")
+            }
+        })
+    },[])
 
     const signIn = () => {  
         auth.signInWithPopup(provider)
@@ -20,17 +33,20 @@ function Header() {
                 email:user.email,
                 photo:user.photoURL
             }))
+            navigate.push("/")
         })
     }
 
     const signOut = () =>{
         auth.signOut()
-        .then((res)=>{
+        .then(()=>{
 
             dispatch(setSignOut({
-
+                name:null,
+                email:null,
+                photo:null
             }))
-            history.push("/login")
+            navigate.push("/login")
         })
     }
 
