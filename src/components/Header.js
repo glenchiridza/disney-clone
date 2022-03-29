@@ -1,44 +1,60 @@
 import React from 'react'
 import styled from 'styled-components';
+import { selectUserName,selectUserPhoto } from '../features/user/userSlice';
+import {useSelector} from 'react-redux';
 
 function Header() {
+
+    const userName = useSelector(selectUserName);
+    const userPhoto = useSelector(selectUserPhoto);
+
   return (
     <Nav>
         <Logo src="images/logo.svg"/>
-        <NavMenu>
-            <a>
-                <img src="images/home-icon.svg"/>
-                <span>HOME</span>
-            </a>
+        {
+            !userName ? (
 
-            <a>
-                <img src="images/search-icon.svg"/>
-                <span>SEARCH</span>
-            </a>
+            <Login>Login</Login>) :
 
-            <a>
-                <img src="images/watchlist-icon.svg"/>
-                <span>WATCHLIST</span>
-            </a>
+            <>
+        
+            <NavMenu>
+                <a>
+                    <img src="images/home-icon.svg"/>
+                    <span>HOME</span>
+                </a>
 
-            <a>
-                <img src="images/original-icon.svg"/>
-                <span>ORIGINALS</span>
-            </a>
+                <a>
+                    <img src="images/search-icon.svg"/>
+                    <span>SEARCH</span>
+                </a>
 
-            <a>
-                <img src="images/movie-icon.svg"/>
-                <span>MOVIES</span>
-            </a>
+                <a>
+                    <img src="images/watchlist-icon.svg"/>
+                    <span>WATCHLIST</span>
+                </a>
 
-            <a>
-                <img src="images/series-icon.svg"/>
-                <span>SERIES</span>
-            </a>
+                <a>
+                    <img src="images/original-icon.svg"/>
+                    <span>ORIGINALS</span>
+                </a>
 
-        </NavMenu>
+                <a>
+                    <img src="images/movie-icon.svg"/>
+                    <span>MOVIES</span>
+                </a>
 
-        <UserImg src="images/glen.jpg" />
+                <a>
+                    <img src="images/series-icon.svg"/>
+                    <span>SERIES</span>
+                </a>
+
+            </NavMenu>
+
+            <UserImg src="images/glen.jpg" />
+         </>
+        }
+
     </Nav>
   )
 }
@@ -105,4 +121,18 @@ const UserImg = styled.img`
     border-radius:55%;
     
     cursor:pointer;
+`;
+
+const Login = styled.div`
+    border:1px solid #e1e1e1;
+    color:#ffffff;
+    padding:10px 15px;
+    border-radius:3px;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+
+    &:hover{
+        background:#fff;
+        color:#000;
+    }
 `;
