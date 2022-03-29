@@ -2,19 +2,26 @@ import React from 'react'
 import styled from 'styled-components';
 import { selectUserName,selectUserPhoto } from '../features/user/userSlice';
 import {useSelector} from 'react-redux';
+import {auth,provider} from "../firebase"
 
 function Header() {
 
     const userName = useSelector(selectUserName);
     const userPhoto = useSelector(selectUserPhoto);
 
+    const signIn = () => {
+
+    }
+
   return (
     <Nav>
         <Logo src="images/logo.svg"/>
         {
             !userName ? (
-
-            <Login>Login</Login>) :
+                <LoginContain>
+                    <Login>Login</Login>
+                </LoginContain>
+            ) :
 
             <>
         
@@ -126,13 +133,21 @@ const UserImg = styled.img`
 const Login = styled.div`
     border:1px solid #e1e1e1;
     color:#ffffff;
-    padding:10px 15px;
+    padding:5px 15px;
     border-radius:3px;
     letter-spacing:1.2px;
     text-transform:uppercase;
+    transition:all .3s;
+    cursor:pointer;
 
     &:hover{
         background:#fff;
         color:#000;
     }
+`;
+
+const LoginContain = styled.div`
+    display:flex;
+    flex:1;
+    justify-content:end;
 `;
