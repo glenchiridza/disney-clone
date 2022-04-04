@@ -4,14 +4,24 @@ import "firebase/compat/firestore"
 import "firebase/compat/storage"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA9BnlX96fMf7XiUVCFRsoQzG8DGERJkeY",
-  authDomain: "disneyplus-clone-a33d5.firebaseapp.com",
-  projectId: "disneyplus-clone-a33d5",
-  storageBucket: "disneyplus-clone-a33d5.appspot.com",
-  messagingSenderId: "37918794208",
-  appId: "1:37918794208:web:dbe9842dfe1dda522a4b85",
-  measurementId: "G-DRVLJKWRWG",
+
+  apiKey: "AIzaSyAPMi_Svrs7p7s6ljnpUrHTnsls0KDqoMc",
+
+  authDomain: "authentication-8a6c9.firebaseapp.com",
+
+  databaseURL: "https://authentication-8a6c9.firebaseio.com",
+
+  projectId: "authentication-8a6c9",
+
+  storageBucket: "authentication-8a6c9.appspot.com",
+
+  messagingSenderId: "841514813666",
+
+  appId: "1:841514813666:web:a7c8347de1bc7dfed2b6bb"
+
 };
+
+
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();

@@ -24,22 +24,34 @@ function Movies() {
                         </Wrap>
                     })
             }
-
+  
             <Wrap>
+        <Link to={`/detail`}>     
                 <img src='/images/slider-scale.jpg' />
-            </Wrap>
+        </Link>
 
+            </Wrap>
+  
             <Wrap>
+        <Link to={`/detail`}>
                 <img src='/images/slider-badag.jpg' />
+            </Link>
             </Wrap>
 
-
             <Wrap>
+
+            <Link to={`/detail`}>  
                 <img src='/images/slider-scale.jpg' />
-            </Wrap>
 
+            </Link>
+            </Wrap>
+ 
             <Wrap>
+
+            <Link to={`/detail`}> 
                 <img src='/images/slider-badag.jpg' />
+
+            </Link>
             </Wrap>
 
 
