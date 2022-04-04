@@ -26,21 +26,21 @@ function Movies() {
             }
   
             <Wrap>
-        <Link to={`/detail`}>     
+        <Link to={`/detail/2`}>     
                 <img src='/images/slider-scale.jpg' />
         </Link>
 
             </Wrap>
   
             <Wrap>
-        <Link to={`/detail`}>
+        <Link to={`/detail/1`}>
                 <img src='/images/slider-badag.jpg' />
             </Link>
             </Wrap>
 
             <Wrap>
 
-            <Link to={`/detail`}>  
+            <Link to={`/detail/2`}>  
                 <img src='/images/slider-scale.jpg' />
 
             </Link>
@@ -48,7 +48,7 @@ function Movies() {
  
             <Wrap>
 
-            <Link to={`/detail`}> 
+            <Link to={`/detail/1`}> 
                 <img src='/images/slider-badag.jpg' />
 
             </Link>

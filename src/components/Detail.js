@@ -74,7 +74,14 @@ function Detail() {
         */}
         
         <Background>
-            <img src='/images/slider-badag.jpg' />
+            {id == 1 &&
+            <img src='/images/slider-badag.jpg' /> }
+
+            {id == 2 &&
+            <img src='/images/slider-scale.jpg' />
+
+            }
+            
         </Background>
 
         <ImageTitle>
